@@ -1,0 +1,19 @@
+body {
+    background-color: #9BC8E7;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; 
+  }
+
+  h1 {
+    font-family: "Marker Felt", fantasy;
+    color: #C4A484;
+    text-shadow: 1px black solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
