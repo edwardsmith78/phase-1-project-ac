@@ -1,4 +1,4 @@
-// Fetch the data from the ACNHAPI
+
 fetch("https://acnhapi.com/v1/villagers/")
   .then(response => response.json())
   .then(data => {

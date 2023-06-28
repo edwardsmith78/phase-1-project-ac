@@ -13,7 +13,7 @@
     height: 30vh; 
   }
 
-  h1, h2, h3, span {
+  h1, h2, h3, span, label {
     font-family: "Marker Felt", fantasy;
     color: white;
     text-shadow: 1px black solid;
@@ -29,8 +29,8 @@
   }
   
   .animal-item img {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
   }
   
   #animal-nav {
@@ -51,4 +51,12 @@
     width: 325px;
     height: 325px;
     margin-bottom: 10px;
+  }
+
+  #new-animal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
