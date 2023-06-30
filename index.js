@@ -55,9 +55,6 @@ function addNewAnimal(event) {
      displayAnimal(newAnimal)
     }
 
-const newAnimalForm = document.querySelector("#new-animal-form")
-newAnimalForm.addEventListener("submit", addNewAnimal)
-
 function mouseoverAnimal() {
     const animalDisplaySaying = document.querySelector("#animal-display-saying")
     animalDisplaySaying.textContent = selectedAnimal.saying
@@ -65,3 +62,4 @@ function mouseoverAnimal() {
 
 document.querySelector("#animal-display-image").addEventListener("mouseover", () => mouseoverAnimal(selectedAnimal))
 
+document.querySelector("#new-animal-form").addEventListener("submit", addNewAnimal)
