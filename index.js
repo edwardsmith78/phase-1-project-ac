@@ -6,7 +6,7 @@ fetch("https://acnhapi.com/v1/villagers/")
     const animalNav = document.querySelector("#animal-nav");
 
     const specificAnimalIds = ["rbt02", "shp13", "rbt03", "brd18", "lon07", "cat08", "cbr16", "flg01", "bea13", "kal04"];
-
+    
     specificAnimalIds.forEach(animalId => {
       const animal = data[animalId];
 
@@ -23,10 +23,13 @@ fetch("https://acnhapi.com/v1/villagers/")
 
       animalContainer.append(animalImage);
       animalContainer.append(animalName);
-
       animalNav.append(animalContainer);
+
+      selectedAnimal = animal
     });
   })
+
+  let selectedAnimal
 
 function displayAnimal(animal) {
     const animalName = document.querySelector("#animal-display-name");
@@ -54,4 +57,11 @@ function addNewAnimal(event) {
 
 const newAnimalForm = document.querySelector("#new-animal-form")
 newAnimalForm.addEventListener("submit", addNewAnimal)
+
+function mouseoverAnimal() {
+    const animalDisplaySaying = document.querySelector("#animal-display-saying")
+    animalDisplaySaying.textContent = selectedAnimal.saying
+}
+
+document.querySelector("#animal-display-image").addEventListener("mouseover", () => mouseoverAnimal(selectedAnimal))
 
